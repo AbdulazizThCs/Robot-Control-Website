@@ -23,7 +23,9 @@ A smart robot control system that stores, manages, and runs movements using an i
 
 5. `db.php` -> Manages database connection to MySQL (XAMPP)
 
-6. `style.css` -> Contains modern design and styling rules for the web UI  
+6. `style.css` -> Contains modern design and styling rules for the web UI
+
+7. `robot-arm-db.sql` -> SQL script to create and initialize database with required tables  
 
 # How to Use
 
