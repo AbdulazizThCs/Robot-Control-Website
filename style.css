@@ -1,0 +1,450 @@
+/* Robot Arm Control Panel Styles */
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #305822;
+    background: linear-gradient(135deg, #fff 0%, #b1fcb1 100%);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Page Title Styles */
+.page-title {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #305822 0%, #1e3915 100%);
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(48, 88, 34, 0.3);
+}
+
+.page-title h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Control Panel Styles */
+.control-panel {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(48, 88, 34, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(177, 252, 177, 0.2);
+}
+
+.control-panel h2 {
+    color: #305822;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.control-panel h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #305822 0%, #1e3915 100%);
+    border-radius: 2px;
+}
+
+/* Slider Styles */
+.sliders-container {
+    margin-bottom: 30px;
+}
+
+.slider-group {
+    margin-bottom: 20px;
+}
+
+.slider-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #305822;
+    font-size: 16px;
+}
+
+.slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #b1fcb1;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.slider:hover {
+    background: #9af09a;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #305822 0%, #1e3915 100%);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(48, 88, 34, 0.3);
+    transition: all 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(48, 88, 34, 0.4);
+}
+
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #305822 0%, #1e3915 100%);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(48, 88, 34, 0.3);
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 2px 2px 6px #c5c5c5;
+    font-weight: 500;
+}
+
+.btn:hover {
+    border: 1px solid #305822;
+    background: #f0f0f0;
+}
+
+.btn:active {
+    box-shadow: 1px 1px 4px #c5c5c5;
+}
+
+.btn-primary {
+    background: #4a7c3a;
+    color: white;
+    border: 1px solid #4a7c3a;
+}
+
+.btn-primary:hover {
+    background: #305822;
+    border: 1px solid #305822;
+}
+
+.btn-secondary {
+    background: #718096;
+    color: white;
+    border: 1px solid #718096;
+}
+
+.btn-secondary:hover {
+    background: #4a5568;
+    border: 1px solid #4a5568;
+}
+
+.btn-success {
+    background: #305822;
+    color: white;
+    border: 1px solid #305822;
+}
+
+.btn-success:hover {
+    background: #1e3915;
+    border: 1px solid #1e3915;
+}
+
+.btn-warning {
+    background: #d69e2e;
+    color: white;
+    border: 1px solid #d69e2e;
+}
+
+.btn-warning:hover {
+    background: #b7791f;
+    border: 1px solid #b7791f;
+}
+
+.btn-info {
+    background: #305822;
+    color: white;
+    border: 1px solid #305822;
+}
+
+.btn-info:hover {
+    background: #1e3915;
+    border: 1px solid #1e3915;
+}
+
+.btn-danger {
+    background: #e53e3e;
+    color: white;
+    border: 1px solid #e53e3e;
+}
+
+.btn-danger:hover {
+    background: #c53030;
+    border: 1px solid #c53030;
+}
+
+.btn-small {
+    padding: 0.4em 1em;
+    font-size: 11px;
+    margin: 0 2px;
+    border-radius: 0.4em;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Table Styles */
+.poses-table {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 16px rgba(48, 88, 34, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(177, 252, 177, 0.2);
+}
+
+.poses-table h2 {
+    color: #305822;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.poses-table h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #305822 0%, #b1fcb1 100%);
+    border-radius: 2px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(48, 88, 34, 0.1);
+}
+
+.poses-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 13px;
+}
+
+.poses-data-table thead {
+    background: linear-gradient(135deg, #305822 0%, #1e3915 100%);
+    color: white;
+}
+
+.poses-data-table th,
+.poses-data-table td {
+    padding: 8px 6px;
+    text-align: center;
+    border-bottom: 1px solid #b1fcb1;
+}
+
+.poses-data-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+}
+
+.poses-data-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.poses-data-table tbody tr:hover {
+    background-color: #f0fff0;
+    transform: scale(1.01);
+}
+
+.poses-data-table tbody tr:nth-child(even) {
+    background-color: #fafff9;
+}
+
+/* Run Pose Page Styles */
+.run-data-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 24px rgba(48, 88, 34, 0.1);
+}
+
+.motor-data-table,
+.command-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(48, 88, 34, 0.1);
+}
+
+.motor-data-table th,
+.motor-data-table td,
+.command-data-table th,
+.command-data-table td {
+    padding: 8px 6px;
+    text-align: center;
+    border-bottom: 1px solid #b1fcb1;
+}
+
+.motor-data-table thead,
+.command-data-table thead {
+    background: linear-gradient(135deg, #305822 0%, #1e3915 100%);
+    color: white;
+}
+
+.motor-data-table th,
+.command-data-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+}
+
+.motor-data-table tbody tr:nth-child(even),
+.command-data-table tbody tr:nth-child(even) {
+    background-color: #fafff9;
+}
+
+.command-data-table td {
+    font-family: monospace;
+    background: #f0fff0;
+    color: #305822;
+    word-break: break-all;
+}
+
+/* Status Page Styles */
+.status-container {
+    max-width: 500px;
+    margin: 100px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(48, 88, 34, 0.1);
+    text-align: center;
+}
+
+.status-success {
+    color: #305822;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.status-message {
+    color: #305822;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .control-panel,
+    .poses-table {
+        padding: 15px;
+    }
+    
+    .page-title h1 {
+        font-size: 24px;
+    }
+    
+    .poses-data-table th,
+    .poses-data-table td {
+        padding: 6px 4px;
+        font-size: 11px;
+    }
+    
+    .motor-data-table th,
+    .motor-data-table td,
+    .command-data-table th,
+    .command-data-table td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .btn-small {
+        padding: 4px 8px;
+        font-size: 10px;
+        margin: 0 2px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
